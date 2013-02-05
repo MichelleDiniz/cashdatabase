@@ -1,0 +1,31 @@
+body {
+  font-family: "Helvetica", Verdana, Arial, sans-serif;
+  font-size: 13px;
+}
+a, a:visited, a:active {
+  color: #5894d6;
+}
+a:hover {
+  background:none;
+  text-decoration: underline;
+  color: #8b67a9;
+}
+#content {
+  width: 960px;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Arial Black", sans-serif;
+  color: #8663a7;
+}
+header {
+
+}
+table {
+  width: 660px;
+  & tr:nth-child(odd) {
+    background: #eee;
+    color: #666;
+  }
+  
+}

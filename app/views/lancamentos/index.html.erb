@@ -1,0 +1,29 @@
+<%= render :partial => "layouts/menu" %>
+
+<h2>Lançamentos</h2>
+
+<table>
+  <tr>
+    <th>Descrição</th>
+    <th>Data</th>
+    <th>Planilha</th>
+    <th>Valor</th>
+    <th colspan="3">Opções</th>
+  </tr>
+
+<% @lancamentos.each do |lancamento| %>
+  <tr>
+    <td><%= lancamento.descricao %></td>
+    <td><%= lancamento.date %></td>
+    <td><%= lancamento.centro_de_custo %></td>
+    <td><%= lancamento.valor %></td>
+    <td><%= link_to 'Ver', lancamento %></td>
+    <td><%= link_to 'Excluir', edit_lancamento_path(lancamento) %></td>
+    <td><%= link_to 'Deletar', lancamento, method: :delete, data: { confirm: 'Tem certeza que deseja excluir esse lançamento?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Inserir novo lançamento', new_lancamento_path %>

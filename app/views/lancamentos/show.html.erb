@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @lancamento.descricao %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @lancamento.date %>
+</p>
+
+<p>
+  <b>Planilha:</b>
+  <%= @lancamento.centro_de_custo_id %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @lancamento.valor %>
+</p>
+
+<%= link_to 'Editar', edit_lancamento_path(@lancamento) %> |
+<%= link_to 'Voltar', lancamentos_path %>

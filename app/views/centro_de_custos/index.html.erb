@@ -1,0 +1,23 @@
+<%= render :partial => "layouts/menu" %>
+
+<h2>Planilhas de Gastos</h2>
+
+<table>
+  <tr>
+    <th>Planilha de gasto</th>
+    <th colspan="3">Configurações</th>
+  </tr>
+
+<% @centro_de_custos.each do |centro_de_custo| %>
+  <tr>
+    <td><%= centro_de_custo.nome %></td>
+    <td><%= link_to 'Ver', centro_de_custo %></td>
+    <td><%= link_to 'Editar', edit_centro_de_custo_path(centro_de_custo) %></td>
+    <td><%= link_to 'Deletar', centro_de_custo, method: :delete, data: { confirm: 'Tem certeza que quer deletar essa planilha de gastos?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Criar nova Planilha de Gastos', new_centro_de_custo_path %>
