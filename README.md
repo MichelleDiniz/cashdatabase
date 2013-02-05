@@ -2,6 +2,7 @@ cashdatabase
 ============
 
 My first attempt to develop in ruby on rails. This is a spreadsheet control spending.
+I develop this only for study. =)
 
 # Requerimentos:
 1. [MySQL 5.x](http://mysql.com)
